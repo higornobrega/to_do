@@ -11,5 +11,8 @@
 {% for content in contents %}
   <p>{{content.content}}</p>
   <p>{{content.date}}</p>
+  <form action="../tarefas/delete/{{content.id}}" method="post"> {% csrf_token %}
+    <button type="submit">DELETAR</button>
+  </form>
   <br>
 {% endfor %}

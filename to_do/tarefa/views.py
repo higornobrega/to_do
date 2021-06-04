@@ -16,3 +16,8 @@ def index(request):
         'form':form
     } 
     return render(request, 'lists.html', context)
+
+def delete_content(request, id):
+    deleteContent = TarefaBd.objects.get(id=id)
+    deleteContent.delete()
+    return redirect('/')
