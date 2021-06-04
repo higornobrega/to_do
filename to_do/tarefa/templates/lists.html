@@ -1,4 +1,9 @@
 <h1>To App Django</h1>
+
+<form action="" method="post"> {% csrf_token %}
+  {{form.as_p}}
+
+</form>
 {% for content in contents %}
   <p>{{content.content}}</p>
 {% endfor %}
